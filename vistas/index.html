@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML5</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div class="titulo">
+		<h1>Olive Garden</h1>
+		<h5>Italian Kitchen</h5>	
+	</div>
+	<div class="contenedor">
+		<header>
+			
+			<nav>
+				<ul>
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#seccion1">Nosotros</a></li>
+					<li><a href="#seccion2">Menu</a></li>
+					<li><a href="#seccion3">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section id="inicio">
+				<h2>Pagina oficial de Olive Garden</h2>
+				<img id="imagen" src="../imagenes/olive-garden-ecuador-2.jpg" alt="Local">
+			</section>
+
+			<section id="seccion1">
+				<h2>Nosotros</h2>
+				<p>Olive Garden fue fundada en 1982 en Orlando, Florida. Es la cadena de restaurantes italianos más grande de los Estados Unidos, donde opera con más de 860 locales y emplea a 96.000 personas. Actualmente, está presente en Canadá, México, Costa Rica, El Salvador, Panamá, Brasil y Ecuador. Ofrece a sus visitantes un trato familiar en un ambiente cálido y acogedor en el que pueden disfrutar de comida de alta calidad, acompañada de excelentes vinos. Olive Garden cuenta con una oferta única en el mercado, el famoso Never-Ending, que permite pedir sopas o ensalada y sus famosos breadsticks de manera ilimitada.</p>
+			</section>
+
+			<section id="seccion2">
+				<h2>Menu</h2>
+				<div class="imagenes1">
+					<div> <img id="imagenes" src="../imagenes/img1.jpg" alt="Local"> </div>
+					<div> <img id="imagenes" src="../imagenes/img2.jpg" alt="Local"> </div>
+					<div> <img id="imagenes" src="../imagenes/img3.jpg" alt="Local"> </div>
+					</div>
+				<div class="imagenes2">
+					<div> <img id="imagenes" src="../imagenes/img4.jpg" alt="Local"> </div>
+					<div> <img id="imagenes" src="../imagenes/img5.jpg" alt="Local"> </div>
+					<div> <img id="imagenes" src="../imagenes/img6.jpg" alt="Local"> </div>
+				</div>
+			</section>
+
+			<section id="seccion3">
+				<h2>Contacto</h2>
+				<form action="procesar.php" method="post">
+					<label for="nombre">Nombre:</label>
+					<input type="text" id="nombre" name="nombre" required>
+
+					<label for="email">Correo electrónico:</label>
+					<input type="email" id="email" name="email" required>
+
+					<label for="mensaje">Mensaje:</label>
+					<textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea>
+
+					<button type="submit">Enviar</button>
+				</form>
+			</section>
+		</main>
+	</div>
+    <footer>
+        <p>&copy; 2024 Mi sitio web</p>
+    </footer>
+</body>
+</html>
