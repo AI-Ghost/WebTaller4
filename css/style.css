@@ -1,31 +1,51 @@
 body {
     font-family: 'Gill Sans';
-    color: #4b2a00d2;
+    color: #002d35d2;
     margin: 0;
     padding: 0;
 }
 
 header {
-    font-size: large;
-	top: 20px; /* Posicionamiento superior */
-    left: 0; /* Posicionamiento izquierdo */
-    width: 200px; /* Ancho del menú */
-    height: 100vh; /* Altura del menú (100% del viewport) */
-    background-color: #D6CFCD; /* Color de fondo del menú */
-    padding: 20px; /* Padding interno del menú */
-	flex:1;
-    transition: all 0.3s ease; /* Animación de transición para suavizar los cambios */
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    background-color: #ebebeb;
+    padding: 20px;
+    text-align: center;
+}
+
+.logoPagina img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
 }
 
 .titulo {
-    color: #4b2a00d2;
-    background-color: #f1f0e7;
     text-align: center;
 	display:block;
     padding: 10px;
 }
 
+.logosRedes {
+    top: 0; /* Colocar en la parte superior del encabezado */
+    margin: 10px;
+    display: flex;
+}
+
+.logosRedes img {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    background-color: #ebebeb;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
 nav ul {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -34,19 +54,58 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #000;
-	display: block; /* Ocupa todo el ancho disponible */
+    color: #575757;
     padding: 10px; /* Padding para cada enlace */
     text-decoration: none; /* Elimina la decoración por defecto */
-    color: #fff; /* Color del texto de los enlaces */
-    transition: color 0.3s ease; /* Animación de transición para el color */
-
 }
 
 main {
     padding: 20px;
-	display: inline;
-	flex:4;
+}
+
+.contenedor-carrusel {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carrusel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease;
+}
+
+.indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.indicador {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.indicador.activo {
+    background-color: #000;
 }
 
 .imagenes1 {
@@ -58,7 +117,7 @@ main {
 }
 
 #imagenes {
-    width: 350px;
+    width: 430px;
     height: 300px;
 }
 
@@ -87,14 +146,4 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-}  
-
-.contenedor{
-	display:flex;
 }
